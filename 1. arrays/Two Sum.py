@@ -20,7 +20,7 @@
 # Input: nums = [3,2,4], target = 6
 # Output: [1,2]
 
-def twoSum(nums: List[int], target: int) -> List[int]:
+def twoSum(nums, target):
         prevMap = {}  # val -> index
 
         for i, n in enumerate(nums):
@@ -29,3 +29,6 @@ def twoSum(nums: List[int], target: int) -> List[int]:
                 return [prevMap[diff], i]
             prevMap[n] = i
 
+nums = [3,2,4]
+target = 6
+print(twoSum(nums,target))
