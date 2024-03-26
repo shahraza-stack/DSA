@@ -19,8 +19,11 @@
 def moveZeroes(nums):
     left = 0
     for right in range(len(nums)):
+        # if the current element at right pointer is non-zero
         if nums[right]:
+            # Swap the non-zero element at right with the element at left
             nums[left], nums[right] = nums[right], nums[left]
+            # Move the left pointer to the next position for the next non-zero element
             left += 1
     return nums
 
